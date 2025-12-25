@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的世界景之路服务器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1620924288518-866536941a17?w=1200&h=600&fit=crop') no-repeat center center/cover;
+            background-blend-mode: overlay;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #4ecdc4;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #38b0a9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #4ecdc4;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #4ecdc4;
+            box-shadow: 0 15px 30px rgba(78, 205, 196, 0.2);
+        }
+
+        .feature-card h3 {
+            color: #4ecdc4;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .download-section {
+            background: rgba(78, 205, 196, 0.1);
+            border-radius: 10px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 20px 40px;
+            background: #4ecdc4;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #38b0a9;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(78, 205, 196, 0.4);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">景之路服务器</div>
+                <ul class="nav-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">服务器介绍</a></li>
+                    <li><a href="#features">玩法特色</a></li>
+                    <li><a href="#download">客户端下载</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>欢迎来到景之路服务器</h1>
+            <p>探索无限可能，开启你的冒险之旅</p>
+            <a href="#download" class="btn">立即下载客户端</a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">服务器介绍</h2>
+            <div class="about-content">
+                <div>
+                    <h3>关于景之路</h3>
+                    <p>景之路服务器是一个专注于生存、建筑和冒险的我的世界服务器。我们致力于为玩家提供一个稳定、公平、有趣的游戏环境。</p>
+                    <p>服务器采用最新的我的世界版本，拥有丰富的插件和自定义玩法，让你体验不一样的我的世界。</p>
+                    <p>我们的管理团队由经验丰富的玩家组成，24小时在线维护服务器稳定，处理玩家问题。</p>
+                </div>
+                <div>
+                    <h3>服务器特色</h3>
+                    <ul>
+                        <li>✅ 稳定的服务器性能</li>
+                        <li>✅ 公平的游戏环境</li>
+                        <li>✅ 丰富的自定义玩法</li>
+                        <li>✅ 友好的社区氛围</li>
+                        <li>✅ 专业的管理</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">玩法特色</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>生存模式</h3>
+                    <p>经典的生存玩法，收集资源、建造家园、对抗怪物。我们调整了游戏难度，让新手也能轻松上手。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>建筑大赛</h3>
+                    <p>定期举办建筑大赛，优秀作品可以获得丰厚奖励。展示你的建筑才华，成为服务器的建筑大师。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>冒险任务</h3>
+                    <p>丰富的冒险任务线，探索神秘的地下城，击败强大的BOSS，获取稀有装备。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>经济系统</h3>
+                    <p>完善的经济系统，可以通过交易、挖矿、打工等方式获取游戏货币，购买各种物品。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>社区活动</h3>
+                    <p>定期举办社区活动，如节日庆典、PVP比赛、抽奖等，增强玩家之间的互动。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>自定义插件</h3>
+                    <p>我们开发了许多自定义插件，如宠物系统、结婚系统、帮派系统等，让游戏更加有趣。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="download">
+        <div class="container">
+            <h2 class="section-title">客户端下载</h2>
+            <div class="download-section">
+                <h3>一键下载客户端</h3>
+                <p>我们提供了整合好的客户端，包含所有必要的模组和资源包</p>
+                <p>版本：1.20.1</p>
+                <p>大小：约2.5GB</p>
+                <a href="#" class="download-btn">立即下载</a>
+                <p style="margin-top: 30px; color: #ccc;">下载前请确保你已经安装了Java 17或更高版本</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 景之路服务器. 保留所有权利.</p>
+        </div>
+    </footer>
+</body>
+</html>
